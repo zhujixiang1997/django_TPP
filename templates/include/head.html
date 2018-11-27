@@ -1,0 +1,19 @@
+<div class="head clearfix">
+    <span>欢迎来到全球最大的电影网站</span>
+    <ul class="head_right">
+        <li><a href="#">收藏网站</a></li>
+        <li><a href="#">登录</a></li>
+        <li><a href="#">注册</a></li>
+        <li><a href="#"> | </a></li>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">短视频</a></li>
+        {% for cata in catas %}
+            <li><a href="#">{{ cata.name }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+<div class="head_gun">
+    <marquee onmouseover='this.stop()' onmouseout='this.start()'>
+        <a href="#">注册</a>|<a href="#">登录</a>后观看更多高清无码视频
+    </marquee>
+</div>

@@ -1,0 +1,111 @@
+{% load staticfiles %}
+<div>
+    <div class="main clearfix">
+            <div class="main_left clearfix">
+                <div class="main_left_title clearfix">
+                    <span>最新电影推荐</span>
+                    <a href="#">更多</a>
+                </div>
+                <div class="left_content">
+                    {% for film in film_movies1 %}
+                        <ul class="movies">
+                            <li> <a href="#"><img class="img" src="{% static film.image %}"></a></li>
+                            <li class="p">{{ film.name }}</li>
+                            <li class="name">{{ film.sub_class_name }}-{{ film.on_decade }}</li>
+                        </ul>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="main_right clearfix">
+                <div class="main_right_title">
+                    <span>最新电影排行榜</span>
+                </div>
+                <div class="right_content">
+                    {% for film_movie2 in film_movies2 %}
+                        <ul>
+                            <a href="#">
+                                <li class="li_img">
+                                    <span class="number">{{ forloop.counter }}</span>
+                                    <div class="display"><img src="{% static film_movie2.image %}"></div>
+                                    <span class="li_left">{{ film_movie2.name|slice:'0:20' }}</span>
+                                    <span class="li_right">{{ film_movie2.update_time|slice:'5:11' }}</span>
+                                </li>
+                            </a>
+                        </ul>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    <div class="main clearfix">
+            <div class="main_left clearfix">
+                <div class="main_left_title clearfix">
+                    <span>最新电视剧推荐</span>
+                    <a href="#">更多</a>
+                </div>
+                <div class="left_content">
+                    {% for film_teleplay1 in film_teleplays1 %}
+                        <ul class="movies">
+                            <li> <a href="#"><img class="img" src="{% static film_teleplay1.image %}"></a></li>
+                            <li class="p">{{ film_teleplay1.name }}</li>
+                            <li class="name">{{ film_teleplay1.sub_class_name }}-{{ film_teleplay1.on_decade }}</li>
+                        </ul>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="main_right clearfix">
+                <div class="main_right_title">
+                    <span>最新电视剧排行榜</span>
+                </div>
+                <div class="right_content">
+                    {% for film_teleplay2 in film_teleplays2 %}
+                        <ul>
+                            <a href="#">
+                                <li class="li_img">
+                                    <span class="number">{{ forloop.counter }}</span>
+                                    <div class="display"><img src="{% static film_teleplay2.image %}"></div>
+                                    <span class="li_left">{{ film_teleplay2.name }}</span>
+                                    <span class="li_right">{{ film_teleplay2.update_time|slice:'5:11' }}</span>
+                                </li>
+                            </a>
+                        </ul>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    <div class="main clearfix">
+            <div class="main_left clearfix">
+                <div class="main_left_title clearfix">
+                    <span>最新动漫推荐</span>
+                    <a href="#">更多</a>
+                </div>
+                <div class="left_content">
+                    {% for film_animation1 in film_animations1 %}
+                        <ul class="movies">
+                            <li> <a href="#"><img class="img" src="{% static film_animation1.image %}"></a></li>
+                            <li class="p">{{ film_animation1.name }}</li>
+                            <li class="name">{{ film_animation1.sub_class_name }}-{{ film_animation1.on_decade }}</li>
+                        </ul>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="main_right clearfix">
+                <div class="main_right_title">
+                    <span>最新动漫排行榜</span>
+                </div>
+                <div class="right_content">
+                    {% for film_animation2 in film_animations2 %}
+                        <ul>
+                            <a href="#">
+                                <li class="li_img">
+                                    <span class="number">{{ forloop.counter }}</span>
+                                    <div class="display"><img src="{% static film_animation2.image %}"></div>
+                                    <span class="li_left">{{ film_animation2.name|slice:'0:25' }}</span>
+                                    <span class="li_right">{{ film_animation2.update_time|slice:'5:11' }}</span>
+                                </li>
+                            </a>
+                        </ul>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+</div>
