@@ -1,9 +1,8 @@
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.contrib import admin
 
-from movies import views
 
 urlpatterns = [
     url('admin/', admin.site.urls),
-    url('index/', views.index),
+    url('shouye/', include('apps.movies.urls')),
 ]
